@@ -7,15 +7,38 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=2">
 </head>
+<script>
+  document.addEventListener('click', function(e){
+    var btn = e.target.closest('.nav-toggle');
+    var menu = document.querySelector('.nav-links');
+    if(!menu) return;
+
+    if(btn){
+      var open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      return;
+    }
+    // tapping a menu link closes the menu
+    if(e.target.closest('.nav-links a')){
+      menu.classList.remove('open');
+      var t = document.querySelector('.nav-toggle');
+      if(t) t.setAttribute('aria-expanded','false');
+    }
+  });
+</script>
 <body>
 
   <header class="site-nav">
     <div class="nav-row">
       <div class="nav-name">Sineesh&nbsp;VP</div>
-      <ul class="nav-links">
-        <li><a href="#work">Reel</a></li>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+    <span></span><span></span><span></span>
+  </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#work">Show Reel</a></li>
+        <li><a href="#myworks">My Works</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -30,7 +53,7 @@
 
       <div class="hero-role">Senior Motion Graphics Designer</div>
       <h1>Motion design, sharpened with AI.</h1>
-      <p class="hero-sub">15+ years leading animation teams through explainer videos, character work and marketing creative — now pairing that craft with Kling AI, Higgsfield AI and Nano Banana Pro to move faster without losing the frame.</p>
+      <p class="hero-sub">Senior Motion Graphics Designer and Animation Team Lead with 10 years of professional experience  in motion graphics and 15+ years of overall animation experience. Experienced in 2D animation,  motion graphics, video editing, character animation, explainer videos, promotional and digital  marketing content, visual storytelling, and AI-assisted animation workflows. Strong background in  Adobe Creative Cloud, production coordination, quality control, and team leadership. Experienced  Integrating AI tools into suitable stages of visual development and animation production. </p>
 
       <div class="scrubber" aria-hidden="true">
         <div class="playhead"></div>
@@ -90,6 +113,76 @@
       <div class="featured-video">
         <video controls playsinline preload="metadata"
                src="assets/videos/motion.mp4"></video>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MY WORKS ================= -->
+  <section id="works" class="works">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>My works</h2>
+      </div>
+
+          <h3>Motion Graphics Videos</h3>
+      <div class="works-carousel">
+        <button class="works-btn prev" aria-label="Previous videos">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+
+        <div class="works-track">
+          <!-- Landscape videos -->
+          <figure class="work-card"><video controls playsinline preload="metadata" src="assets/videos/motiongraphics/Video_00.mp4"></video><figcaption>Explainer video</figcaption></figure>
+          <figure class="work-card"><video controls playsinline preload="metadata" src="assets/videos/motiongraphics/Video_01.mp4"></video><figcaption>Brand advertisement</figcaption></figure>
+          
+          <figure class="work-card portrait"><video controls playsinline preload="metadata" src="assets/videos/motiongraphics/Video_0.mp4"></video><figcaption>Mobile video 1</figcaption></figure>
+          <figure class="work-card"><video controls playsinline preload="metadata" src="assets/videos/motiongraphics/Video_02.mp4"></video><figcaption>AI video</figcaption></figure>
+          <figure class="work-card"><video controls playsinline preload="metadata" src="assets/videos/motiongraphics/Video_03.mp4"></video><figcaption>Marketing promo</figcaption></figure>
+          <figure class="work-card"><video controls playsinline preload="metadata" src="assets/videos/motiongraphics/Video_04.mp4"></video><figcaption>Logo reveal</figcaption></figure>
+          <figure class="work-card"><video controls playsinline preload="metadata" src="assets/videos/motiongraphics/Video_08.mp4"></video><figcaption>UI animation</figcaption></figure>
+
+          <!-- Mobile videos (same carousel, fitted inside the same box) -->
+          
+          <figure class="work-card portrait"><video controls playsinline preload="metadata" src="assets/videos/motiongraphics/Video_05.mp4"></video><figcaption>Mobile video 2</figcaption></figure>
+          <figure class="work-card portrait"><video controls playsinline preload="metadata" src="assets/videos/motiongraphics/Video_06.mp4"></video><figcaption>Mobile video 3</figcaption></figure>
+          <figure class="work-card portrait"><video controls playsinline preload="metadata" src="assets/videos/motiongraphics/Video_07.mp4"></video><figcaption>Mobile video 4</figcaption></figure>
+          <figure class="work-card portrait"><video controls playsinline preload="metadata" src="assets/videos/motiongraphics/Video_09.mp4"></video><figcaption>Mobile video 5</figcaption></figure>
+          <figure class="work-card portrait"><video controls playsinline preload="metadata" src="assets/videos/motiongraphics/Video_10.mp4"></video><figcaption>Mobile video 6</figcaption></figure>
+          <figure class="work-card portrait"><video controls playsinline preload="metadata" src="assets/videos/motiongraphics/Video_11.mp4"></video><figcaption>Mobile video 7</figcaption></figure>
+          <figure class="work-card portrait"><video controls playsinline preload="metadata" src="assets/videos/motiongraphics/Video_12.mp4"></video><figcaption>Mobile video 8</figcaption></figure>
+          <figure class="work-card portrait"><video controls playsinline preload="metadata" src="assets/videos/motiongraphics/Video_13.mp4"></video><figcaption>Mobile video 9</figcaption></figure>
+          <figure class="work-card portrait"><video controls playsinline preload="metadata" src="assets/videos/motiongraphics/Video_14.mp4"></video><figcaption>Mobile video 10</figcaption></figure>
+        </div>
+
+        <button class="works-btn next" aria-label="Next videos">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+      <h3>AI Videos</h3>
+      <div class="works-carousel">
+        <button class="works-btn prev" aria-label="Previous videos">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+
+        <div class="works-track">
+          <!-- Landscape videos -->
+          <!--<figure class="work-card"><video controls playsinline preload="metadata" src="assets/videos/aivideos/Video_01.mp4"></video><figcaption>Explainer video</figcaption></figure>-->
+          <figure class="work-card"><video controls playsinline preload="metadata" src="assets/videos/aivideos/Video_02.mp4"></video><figcaption>Brand advertisement</figcaption></figure>
+          <!--<figure class="work-card"><video controls playsinline preload="metadata" src="assets/videos/aivideos/Video_03.mp4"></video><figcaption>AI video</figcaption></figure>-->
+          <figure class="work-card"><video controls playsinline preload="metadata" src="assets/videos/aivideos/Video_04.mp4"></video><figcaption>Marketing promo</figcaption></figure>
+          <figure class="work-card"><video controls playsinline preload="metadata" src="assets/videos/aivideos/Video_05.mp4"></video><figcaption>Logo reveal</figcaption></figure>
+          <figure class="work-card"><video controls playsinline preload="metadata" src="assets/videos/aivideos/Video_07.mp4"></video><figcaption>UI animation</figcaption></figure>
+          <figure class="work-card"><video controls playsinline preload="metadata" src="assets/videos/aivideos/Video_08.mp4"></video><figcaption>UI animation</figcaption></figure>
+
+
+          <!-- Mobile videos (same carousel, fitted inside the same box) -->
+          <!--<figure class="work-card portrait"><video controls playsinline preload="metadata" src="assets/videos/aivideos/Video_06.mp4"></video><figcaption>Mobile video 1</figcaption></figure>-->
+          <figure class="work-card portrait"><video controls playsinline preload="metadata" src="assets/videos/aivideos/Video_09.mp4"></video><figcaption>Mobile video 2</figcaption></figure>
+        </div>
+
+        <button class="works-btn next" aria-label="Next videos">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
       </div>
     </div>
   </section>
@@ -216,7 +309,6 @@
         <h3>Elsewhere</h3>
         <ul>
           <li><a href="https://www.behance.net/sineeshvp" target="_blank" rel="noopener">Behance portfolio</a></li>
-          <li><a href="https://tinyurl.com/3ctjvv3p" target="_blank" rel="noopener">Motion graphics reel (Drive)</a></li>
           <li><a href="https://linkedin.com/in/sineesh-vp-1aa36934" target="_blank" rel="noopener">LinkedIn profile</a></li>
         </ul>
       </div>
@@ -246,3 +338,45 @@
 
 </body>
 </html>
+<script>
+  (function(){
+    var vids = document.querySelectorAll('.works video');
+    vids.forEach(function(v){
+      v.addEventListener('play', function(){
+        vids.forEach(function(o){ if(o !== v) o.pause(); });
+      });
+    });
+  })();
+</script>
+<script>
+  (function(){
+    var allVideos = document.querySelectorAll('.works video');
+
+    document.querySelectorAll('.works-carousel').forEach(function(box){
+      var track = box.querySelector('.works-track');
+      var prev  = box.querySelector('.works-btn.prev');
+      var next  = box.querySelector('.works-btn.next');
+
+      function page(){
+        return track.clientWidth + (parseFloat(getComputedStyle(track).columnGap) || 16);
+      }
+      function update(){
+        prev.disabled = track.scrollLeft <= 2;
+        next.disabled = track.scrollLeft >= track.scrollWidth - track.clientWidth - 2;
+      }
+
+      prev.addEventListener('click', function(){ track.scrollBy({ left: -page(), behavior:'smooth' }); });
+      next.addEventListener('click', function(){ track.scrollBy({ left:  page(), behavior:'smooth' }); });
+      track.addEventListener('scroll', update, { passive:true });
+      window.addEventListener('resize', update);
+      update();
+    });
+
+    // Only one video plays at a time, across both carousels
+    allVideos.forEach(function(v){
+      v.addEventListener('play', function(){
+        allVideos.forEach(function(o){ if(o !== v) o.pause(); });
+      });
+    });
+  })();
+</script>
