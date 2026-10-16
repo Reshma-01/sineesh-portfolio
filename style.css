@@ -249,10 +249,10 @@
 /* ---------- My works carousel: 2 rows x 3 videos ---------- */
 .works h3{ font-size:1.25rem; margin:0 0 24px; }
 .works-carousel + h3{ margin-top:64px; }
-
+.works .wrap{ max-width:1560px; padding:0 20px; }   
 .works-carousel{
   position:relative;
-  padding:0 84px;               /* side gutters so the buttons sit outside the videos */
+  padding:0 96px;               /* side gutters so the buttons sit outside the videos */
 }
 
 .works-track{
@@ -277,14 +277,14 @@
 .work-card{ margin:0; min-width:0; scroll-snap-align:start; }
 .work-card video{
   display:block; width:100%; aspect-ratio:16/9; object-fit:cover;
-  background:#000; border-radius:12px; border:1px solid var(--line);
+  border-radius:12px; border:1px solid var(--line);
 }
 .work-card.portrait video{ object-fit:contain; }   /* mobile videos fit inside the box */
 .work-card figcaption{ margin-top:10px; font-size:0.9rem; color:var(--muted); }
 
 /* Left / right buttons: outside the videos, dark with amber highlight */
 .works-btn{
-  position:absolute; top:50%; transform:translateY(-50%); z-index:2;
+  position:absolute; top:calc(50% - 16px); transform:translateY(-50%); z-index:2;   /* only top changed */
   width:60px; height:60px; border-radius:50%;
   background:#000; color:#fff;
   border:none; outline:none; cursor:pointer;
