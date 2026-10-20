@@ -4,7 +4,7 @@
 --surface:#EDE6D6;
 --text:#1F1B16;
 --muted:#6B645A;
---accent:#B9770E;
+--accent:#f8a929ef;
 --accent-soft:#D9B77A;
 --line:rgba(31,27,22,0.14);
 --line-strong:rgba(31,27,22,0.28);
@@ -27,7 +27,6 @@
     line-height:1.5;
     -webkit-font-smoothing:antialiased;
   }
-
   h1,h2,h3{
     font-family:'Fraunces', serif;
     font-weight:600;
@@ -68,10 +67,10 @@
     padding:18px 32px;
     max-width:var(--wrap); margin:0 auto;
   }
-  .nav-name{ font-family:'Fraunces', serif; font-size:1.05rem; font-weight:600; }
+  .nav-name{ font-family:'Fraunces', serif;  font-size:1.25rem; font-weight:600; }
   .nav-links{ display:flex; gap:28px; list-style:none; margin:0; padding:0; }
   .nav-links a{
-    text-decoration:none; color:var(--muted); font-size:0.92rem;
+    text-decoration:none; color:black; font-size:1rem;
     border-bottom:1px solid transparent; padding-bottom:2px;
     transition:color .18s, border-color .18s;
   }
@@ -118,9 +117,9 @@
     color:var(--accent); font-size:1.15rem; margin-bottom:18px;
   }
   .hero h1{
-    font-size:clamp(2.6rem, 6vw, 4.6rem);
+    font-size:40px;
     line-height:1.02;
-    max-width:14ch;
+    /*max-width:14ch;*/
   }
   .hero-sub{
     margin-top:28px; max-width:52ch; color:var(--muted); font-size:1.05rem;
@@ -335,6 +334,7 @@
   .nav-links a{
     display:block; padding:14px 0; font-size:1rem;
     border-bottom:1px solid var(--line);
+    color:var(--accent); font-size:1.15rem; margin-bottom:18px;
   }
   .nav-links li:last-child a{ border-bottom:none; }
 }
